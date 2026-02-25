@@ -245,7 +245,7 @@
 
   /* SKILLS SECTION */
   .skills-section { background: var(--black); }
-  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 60px; }
+  .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 60px; }
   .skill-block { background: var(--charcoal); padding: 40px; position: relative; overflow: hidden; transition: background 0.3s; }
   .skill-block:hover { background: #1f0d0d; }
   .skill-block::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s ease; }
@@ -385,8 +385,10 @@
     .exp-role { font-size: 1rem; }
 
     /* METRICS */
-    .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
-    .metric-num { font-size: 3rem; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+    .metric-item { border-left: 2px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 32px 24px; }
+    .metric-num { font-size: 3.2rem; }
+    .metric-label { font-size: 0.75rem; }
 
     /* AWARDS */
     .award-spotlight { grid-template-columns: 1fr; gap: 32px; }
@@ -409,11 +411,11 @@
   }
 
   @media (max-width: 600px) {
-    /* NAV - hamburger style on very small screens */
+    /* NAV - mobile: only logo + Projects */
     nav { padding: 16px 20px; }
-    .nav-links { gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links { gap: 0; }
     .nav-links li { display: none; }
-    .nav-links li:last-child, .nav-links li:nth-last-child(2) { display: block; }
+    .nav-links li:nth-last-child(2) { display: block; }
 
     /* HERO - mobile: keep absolute positioning but fix spacing */
     .hero { min-height: 100svh; min-height: 100vh; }
@@ -446,7 +448,7 @@
     .about-text p { font-size: 0.9rem; line-height: 1.75; }
 
     /* SKILLS */
-    .skills-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
     .skill-block { padding: 20px; }
 
     /* PHOTO STRIP */
@@ -454,9 +456,10 @@
     .photo-strip > div { aspect-ratio: 16/9; }
 
     /* METRICS */
-    .metrics-grid { grid-template-columns: 1fr 1fr; }
-    .metric-num { font-size: 2.5rem; }
-    .metric-label { font-size: 0.6rem; }
+    .metrics-grid { grid-template-columns: 1fr 1fr; gap: 0; }
+    .metric-item { padding: 28px 20px; border-left: 2px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
+    .metric-num { font-size: 2.6rem; text-align: left; }
+    .metric-label { font-size: 0.7rem; line-height: 1.4; text-align: left; }
 
     /* EXPERIENCE */
     .exp-company { font-size: 0.8rem; }
